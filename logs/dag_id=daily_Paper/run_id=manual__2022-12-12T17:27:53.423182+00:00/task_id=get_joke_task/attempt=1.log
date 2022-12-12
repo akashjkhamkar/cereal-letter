@@ -1,0 +1,27 @@
+[2022-12-12 17:27:53,798] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.get_joke_task manual__2022-12-12T17:27:53.423182+00:00 [queued]>
+[2022-12-12 17:27:53,805] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.get_joke_task manual__2022-12-12T17:27:53.423182+00:00 [queued]>
+[2022-12-12 17:27:53,806] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 17:27:53,806] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-12 17:27:53,807] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 17:27:53,818] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_joke_task> on 2022-12-12 17:27:53.423182+00:00
+[2022-12-12 17:27:53,825] {standard_task_runner.py:52} INFO - Started process 842 to run task
+[2022-12-12 17:27:53,832] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'daily_paper', 'get_joke_task', 'manual__2022-12-12T17:27:53.423182+00:00', '--job-id', '237', '--raw', '--subdir', 'DAGS_FOLDER/morning-paper.py', '--cfg-path', '/tmp/tmpmq0usimy', '--error-file', '/tmp/tmpm0vnjt1o']
+[2022-12-12 17:27:53,833] {standard_task_runner.py:80} INFO - Job 237: Subtask get_joke_task
+[2022-12-12 17:27:53,926] {task_command.py:369} INFO - Running <TaskInstance: daily_paper.get_joke_task manual__2022-12-12T17:27:53.423182+00:00 [running]> on host 6bb81baa0a52
+[2022-12-12 17:27:54,018] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=akash.khamkar40@gmail.com
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=daily_paper
+AIRFLOW_CTX_TASK_ID=get_joke_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-12T17:27:53.423182+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-12T17:27:53.423182+00:00
+[2022-12-12 17:27:55,204] {logging_mixin.py:115} INFO - {'error': False, 'category': 'Programming', 'type': 'single', 'joke': '"Can I tell you a TCP joke?"\n"Please tell me a TCP joke."\n"OK, I\'ll tell you a TCP joke."', 'flags': {'nsfw': False, 'religious': False, 'political': False, 'racist': False, 'sexist': False, 'explicit': False}, 'id': 57, 'safe': True, 'lang': 'en'}
+[2022-12-12 17:27:55,205] {python.py:173} INFO - Done. Returned value was: "Can I tell you a TCP joke?"
+"Please tell me a TCP joke."
+"OK, I'll tell you a TCP joke."
+[2022-12-12 17:27:55,238] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=daily_paper, task_id=get_joke_task, execution_date=20221212T172753, start_date=20221212T172753, end_date=20221212T172755
+[2022-12-12 17:27:55,281] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-12 17:27:55,315] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

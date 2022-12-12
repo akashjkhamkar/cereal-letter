@@ -1,0 +1,26 @@
+[2022-12-12 18:03:25,552] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.create_pdf_task manual__2022-12-12T18:03:21.519792+00:00 [queued]>
+[2022-12-12 18:03:25,557] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.create_pdf_task manual__2022-12-12T18:03:21.519792+00:00 [queued]>
+[2022-12-12 18:03:25,558] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 18:03:25,558] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-12 18:03:25,559] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 18:03:25,567] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): create_pdf_task> on 2022-12-12 18:03:21.519792+00:00
+[2022-12-12 18:03:25,571] {standard_task_runner.py:52} INFO - Started process 1821 to run task
+[2022-12-12 18:03:25,575] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'daily_paper', 'create_pdf_task', 'manual__2022-12-12T18:03:21.519792+00:00', '--job-id', '350', '--raw', '--subdir', 'DAGS_FOLDER/morning-paper.py', '--cfg-path', '/tmp/tmppf8i43mf', '--error-file', '/tmp/tmpns5kgdt1']
+[2022-12-12 18:03:25,576] {standard_task_runner.py:80} INFO - Job 350: Subtask create_pdf_task
+[2022-12-12 18:03:25,625] {task_command.py:369} INFO - Running <TaskInstance: daily_paper.create_pdf_task manual__2022-12-12T18:03:21.519792+00:00 [running]> on host 6bb81baa0a52
+[2022-12-12 18:03:25,677] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=akash.khamkar40@gmail.com
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=daily_paper
+AIRFLOW_CTX_TASK_ID=create_pdf_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-12T18:03:21.519792+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-12T18:03:21.519792+00:00
+[2022-12-12 18:03:25,699] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/fpdf/ttfonts.py:831 UserWarning: missing glyph 369
+[2022-12-12 18:03:25,701] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/fpdf/ttfonts.py:710 UserWarning: missing glyph 369
+[2022-12-12 18:03:25,719] {python.py:173} INFO - Done. Returned value was: None
+[2022-12-12 18:03:25,729] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=daily_paper, task_id=create_pdf_task, execution_date=20221212T180321, start_date=20221212T180325, end_date=20221212T180325
+[2022-12-12 18:03:25,747] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-12 18:03:25,770] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

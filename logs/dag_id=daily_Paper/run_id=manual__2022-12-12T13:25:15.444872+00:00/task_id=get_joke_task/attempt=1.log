@@ -1,0 +1,25 @@
+[2022-12-12 13:25:15,794] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_Paper.get_joke_task manual__2022-12-12T13:25:15.444872+00:00 [queued]>
+[2022-12-12 13:25:15,800] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_Paper.get_joke_task manual__2022-12-12T13:25:15.444872+00:00 [queued]>
+[2022-12-12 13:25:15,801] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 13:25:15,801] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-12 13:25:15,802] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 13:25:15,813] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_joke_task> on 2022-12-12 13:25:15.444872+00:00
+[2022-12-12 13:25:15,821] {standard_task_runner.py:52} INFO - Started process 1290 to run task
+[2022-12-12 13:25:15,825] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'daily_Paper', 'get_joke_task', 'manual__2022-12-12T13:25:15.444872+00:00', '--job-id', '79', '--raw', '--subdir', 'DAGS_FOLDER/morning-paper.py', '--cfg-path', '/tmp/tmptccqpxye', '--error-file', '/tmp/tmpzg59r22o']
+[2022-12-12 13:25:15,835] {standard_task_runner.py:80} INFO - Job 79: Subtask get_joke_task
+[2022-12-12 13:25:15,907] {task_command.py:369} INFO - Running <TaskInstance: daily_Paper.get_joke_task manual__2022-12-12T13:25:15.444872+00:00 [running]> on host cbcd6542cb8e
+[2022-12-12 13:25:15,996] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=akash.khamkar40@gmail.com
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=daily_Paper
+AIRFLOW_CTX_TASK_ID=get_joke_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-12T13:25:15.444872+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-12T13:25:15.444872+00:00
+[2022-12-12 13:25:16,842] {logging_mixin.py:115} INFO - {'error': False, 'category': 'Misc', 'type': 'single', 'joke': "Schrödinger's cat walks into a bar and doesn't.", 'flags': {'nsfw': False, 'religious': False, 'political': False, 'racist': False, 'sexist': False, 'explicit': False}, 'id': 197, 'safe': True, 'lang': 'en'}
+[2022-12-12 13:25:16,843] {python.py:173} INFO - Done. Returned value was: Schrödinger's cat walks into a bar and doesn't.
+[2022-12-12 13:25:16,866] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=daily_Paper, task_id=get_joke_task, execution_date=20221212T132515, start_date=20221212T132515, end_date=20221212T132516
+[2022-12-12 13:25:16,901] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-12 13:25:16,927] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

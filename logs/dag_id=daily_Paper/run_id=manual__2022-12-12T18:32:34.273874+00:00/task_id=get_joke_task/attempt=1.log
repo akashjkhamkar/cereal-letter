@@ -1,0 +1,25 @@
+[2022-12-12 18:32:35,391] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.get_joke_task manual__2022-12-12T18:32:34.273874+00:00 [queued]>
+[2022-12-12 18:32:35,397] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.get_joke_task manual__2022-12-12T18:32:34.273874+00:00 [queued]>
+[2022-12-12 18:32:35,397] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 18:32:35,398] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-12 18:32:35,398] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 18:32:35,406] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_joke_task> on 2022-12-12 18:32:34.273874+00:00
+[2022-12-12 18:32:35,411] {standard_task_runner.py:52} INFO - Started process 2549 to run task
+[2022-12-12 18:32:35,415] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'daily_paper', 'get_joke_task', 'manual__2022-12-12T18:32:34.273874+00:00', '--job-id', '393', '--raw', '--subdir', 'DAGS_FOLDER/morning-paper.py', '--cfg-path', '/tmp/tmp0w8hc8wt', '--error-file', '/tmp/tmpbur78dws']
+[2022-12-12 18:32:35,417] {standard_task_runner.py:80} INFO - Job 393: Subtask get_joke_task
+[2022-12-12 18:32:35,497] {task_command.py:369} INFO - Running <TaskInstance: daily_paper.get_joke_task manual__2022-12-12T18:32:34.273874+00:00 [running]> on host 6bb81baa0a52
+[2022-12-12 18:32:35,592] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=akash.khamkar40@gmail.com
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=daily_paper
+AIRFLOW_CTX_TASK_ID=get_joke_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-12T18:32:34.273874+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-12T18:32:34.273874+00:00
+[2022-12-12 18:32:36,531] {logging_mixin.py:115} INFO - {'error': False, 'category': 'Programming', 'type': 'single', 'joke': "Debugging is like being the detective in a crime movie where you're also the murderer at the same time.", 'flags': {'nsfw': False, 'religious': False, 'political': False, 'racist': False, 'sexist': False, 'explicit': False}, 'id': 42, 'safe': True, 'lang': 'en'}
+[2022-12-12 18:32:36,531] {python.py:173} INFO - Done. Returned value was: Debugging is like being the detective in a crime movie where you're also the murderer at the same time.
+[2022-12-12 18:32:36,553] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=daily_paper, task_id=get_joke_task, execution_date=20221212T183234, start_date=20221212T183235, end_date=20221212T183236
+[2022-12-12 18:32:36,567] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-12 18:32:36,595] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

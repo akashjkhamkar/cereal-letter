@@ -1,0 +1,24 @@
+[2022-12-12 17:30:28,214] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.get_news_task manual__2022-12-12T17:30:27.485592+00:00 [queued]>
+[2022-12-12 17:30:28,220] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.get_news_task manual__2022-12-12T17:30:27.485592+00:00 [queued]>
+[2022-12-12 17:30:28,220] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 17:30:28,220] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-12 17:30:28,221] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 17:30:28,228] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_news_task> on 2022-12-12 17:30:27.485592+00:00
+[2022-12-12 17:30:28,232] {standard_task_runner.py:52} INFO - Started process 912 to run task
+[2022-12-12 17:30:28,236] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'daily_paper', 'get_news_task', 'manual__2022-12-12T17:30:27.485592+00:00', '--job-id', '250', '--raw', '--subdir', 'DAGS_FOLDER/morning-paper.py', '--cfg-path', '/tmp/tmplm1tqaqy', '--error-file', '/tmp/tmp3vvkmy1q']
+[2022-12-12 17:30:28,238] {standard_task_runner.py:80} INFO - Job 250: Subtask get_news_task
+[2022-12-12 17:30:28,344] {task_command.py:369} INFO - Running <TaskInstance: daily_paper.get_news_task manual__2022-12-12T17:30:27.485592+00:00 [running]> on host 6bb81baa0a52
+[2022-12-12 17:30:28,424] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=akash.khamkar40@gmail.com
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=daily_paper
+AIRFLOW_CTX_TASK_ID=get_news_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-12T17:30:27.485592+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-12T17:30:27.485592+00:00
+[2022-12-12 17:30:29,161] {python.py:173} INFO - Done. Returned value was: [{'title': "Fearless Paul Butler confident of slaying ‘Monster' Naoya Inoue", 'published_date': '2022-12-12 17:30:15', 'summary': "Naoya Inoue from Japan (L) and England's Paul Butler pose for photographs following a weigh-in ahead of their December 13 bantamweight fight, in Yokohama on December 12, 2022. (Photo by Yuichi YAMAZAKI / AFP)\nPaul Butler said he 'fears no one' as the underdog prepares to face Japan's unbeaten Naoya Inoue in Tokyo on Tuesday to become undisputed bantamweight world champion.\nWBO champion Butler will attempt to do what no other boxer who has faced Inoue has managed so far — beat one of the sport's best pound-for-pound fighters and take his WBC, WBA and IBF belts."}, {'title': "The CTA ran near-empty trains and buses during the pandemic – and it's still struggling to fill them. Now it wants higher taxes on Chicagoans to pay for that mismanagement. – Wirepoints", 'published_date': '2022-12-12 17:30:10', 'summary': "By: Matt Rosenberg and Ted Dabrowski\nIn 2020 and 2021, the Chicago Transit Authority (CTA) partied like it was pre-Covid 2019. The agency kept running trains and buses at the same levels as in 2019 even though ridership numbers had taken a huge 60 percent plunge due to the pandemic. Passenger fare revenue collapsed, and yet CTA officials didn't cut operating expenses a penny thanks to billions in federal Covid handouts. Now with the party set to end – federal relief runs dry in 2025 – Regional Transit Authority (RTA) officials say they want tax hikes to keep running Chicagoland's too-empty trains and buses – including those of the CTA."}, {'title': 'First aid kits market is likely to experience huge growth by 2028', 'published_date': '2022-12-12 17:30:06', 'summary': 'Press release First aid kits market is expected to witness moderate growth registering 4.4% CAGR during the forecast period (2022-2028)\nFirst Aid Kits Market research report is one of the effective ways to target customers and satisfy their growing needs as it gathers all the vital market data. It allows tracking of future business growth for the upcoming period 2022-2028. It further helps in categorizing business goals while targeting consumers. The main objective of any critical organization is to follow new business expansion approaches which are available through this First Aid Kits Market report.'}]
+[2022-12-12 17:30:29,183] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=daily_paper, task_id=get_news_task, execution_date=20221212T173027, start_date=20221212T173028, end_date=20221212T173029
+[2022-12-12 17:30:29,229] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-12 17:30:29,263] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

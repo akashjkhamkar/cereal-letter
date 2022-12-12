@@ -1,0 +1,25 @@
+[2022-12-12 14:19:33,746] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.get_joke_task manual__2022-12-12T14:19:32.321998+00:00 [queued]>
+[2022-12-12 14:19:33,756] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.get_joke_task manual__2022-12-12T14:19:32.321998+00:00 [queued]>
+[2022-12-12 14:19:33,757] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 14:19:33,759] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-12 14:19:33,760] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 14:19:33,774] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_joke_task> on 2022-12-12 14:19:32.321998+00:00
+[2022-12-12 14:19:33,783] {standard_task_runner.py:52} INFO - Started process 1711 to run task
+[2022-12-12 14:19:33,789] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'daily_paper', 'get_joke_task', 'manual__2022-12-12T14:19:32.321998+00:00', '--job-id', '99', '--raw', '--subdir', 'DAGS_FOLDER/morning-paper.py', '--cfg-path', '/tmp/tmp91pfkqt0', '--error-file', '/tmp/tmp5h6jizo6']
+[2022-12-12 14:19:33,792] {standard_task_runner.py:80} INFO - Job 99: Subtask get_joke_task
+[2022-12-12 14:19:33,884] {task_command.py:369} INFO - Running <TaskInstance: daily_paper.get_joke_task manual__2022-12-12T14:19:32.321998+00:00 [running]> on host cbcd6542cb8e
+[2022-12-12 14:19:34,096] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=akash.khamkar40@gmail.com
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=daily_paper
+AIRFLOW_CTX_TASK_ID=get_joke_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-12T14:19:32.321998+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-12T14:19:32.321998+00:00
+[2022-12-12 14:19:35,316] {logging_mixin.py:115} INFO - {'error': False, 'category': 'Dark', 'type': 'single', 'joke': "My ex had an accident. I told the paramedics the wrong blood type for her. She'll finally experience what rejection is really like.", 'flags': {'nsfw': False, 'religious': False, 'political': False, 'racist': False, 'sexist': False, 'explicit': False}, 'id': 152, 'safe': False, 'lang': 'en'}
+[2022-12-12 14:19:35,317] {python.py:173} INFO - Done. Returned value was: My ex had an accident. I told the paramedics the wrong blood type for her. She'll finally experience what rejection is really like.
+[2022-12-12 14:19:35,336] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=daily_paper, task_id=get_joke_task, execution_date=20221212T141932, start_date=20221212T141933, end_date=20221212T141935
+[2022-12-12 14:19:35,387] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-12 14:19:35,416] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

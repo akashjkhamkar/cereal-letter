@@ -1,0 +1,74 @@
+[2022-12-12 16:21:01,812] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.create_pdf_task manual__2022-12-12T16:19:52.279021+00:00 [queued]>
+[2022-12-12 16:21:01,818] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.create_pdf_task manual__2022-12-12T16:19:52.279021+00:00 [queued]>
+[2022-12-12 16:21:01,818] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 16:21:01,819] {taskinstance.py:1357} INFO - Starting attempt 2 of 2
+[2022-12-12 16:21:01,819] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 16:21:01,826] {taskinstance.py:1377} INFO - Executing <Task(PythonVirtualenvOperator): create_pdf_task> on 2022-12-12 16:19:52.279021+00:00
+[2022-12-12 16:21:01,830] {standard_task_runner.py:52} INFO - Started process 2815 to run task
+[2022-12-12 16:21:01,834] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'daily_paper', 'create_pdf_task', 'manual__2022-12-12T16:19:52.279021+00:00', '--job-id', '114', '--raw', '--subdir', 'DAGS_FOLDER/morning-paper.py', '--cfg-path', '/tmp/tmpxuz_o4f3', '--error-file', '/tmp/tmpzve3gjus']
+[2022-12-12 16:21:01,836] {standard_task_runner.py:80} INFO - Job 114: Subtask create_pdf_task
+[2022-12-12 16:21:01,883] {task_command.py:369} INFO - Running <TaskInstance: daily_paper.create_pdf_task manual__2022-12-12T16:19:52.279021+00:00 [running]> on host cbcd6542cb8e
+[2022-12-12 16:21:01,930] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=akash.khamkar40@gmail.com
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=daily_paper
+AIRFLOW_CTX_TASK_ID=create_pdf_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-12T16:19:52.279021+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-12T16:19:52.279021+00:00
+[2022-12-12 16:21:01,932] {process_utils.py:165} INFO - Executing cmd: /usr/local/bin/python -m virtualenv /tmp/venv6w7cm2fg
+[2022-12-12 16:21:01,937] {process_utils.py:169} INFO - Output:
+[2022-12-12 16:21:02,161] {process_utils.py:173} INFO - created virtual environment CPython3.7.13.final.0-64 in 154ms
+[2022-12-12 16:21:02,161] {process_utils.py:173} INFO -   creator CPython3Posix(dest=/tmp/venv6w7cm2fg, clear=False, no_vcs_ignore=False, global=False)
+[2022-12-12 16:21:02,162] {process_utils.py:173} INFO -   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/root/.local/share/virtualenv)
+[2022-12-12 16:21:02,162] {process_utils.py:173} INFO -     added seed packages: pip==22.0.4, setuptools==62.1.0, wheel==0.37.1
+[2022-12-12 16:21:02,163] {process_utils.py:173} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2022-12-12 16:21:02,171] {process_utils.py:165} INFO - Executing cmd: /tmp/venv6w7cm2fg/bin/pip install -r /tmp/venv6w7cm2fg/requirements.txt
+[2022-12-12 16:21:02,176] {process_utils.py:169} INFO - Output:
+[2022-12-12 16:21:02,922] {process_utils.py:173} INFO - Collecting tweepy
+[2022-12-12 16:21:02,924] {process_utils.py:173} INFO -   Using cached tweepy-4.12.1-py3-none-any.whl (101 kB)
+[2022-12-12 16:21:02,940] {process_utils.py:173} INFO - Requirement already satisfied: requests<3,>=2.27.0 in /home/***/.local/lib/python3.7/site-packages (from tweepy->-r /tmp/venv6w7cm2fg/requirements.txt (line 1)) (2.27.1)
+[2022-12-12 16:21:02,941] {process_utils.py:173} INFO - Requirement already satisfied: oauthlib<4,>=3.2.0 in /home/***/.local/lib/python3.7/site-packages (from tweepy->-r /tmp/venv6w7cm2fg/requirements.txt (line 1)) (3.2.0)
+[2022-12-12 16:21:02,942] {process_utils.py:173} INFO - Requirement already satisfied: requests-oauthlib<2,>=1.2.0 in /home/***/.local/lib/python3.7/site-packages (from tweepy->-r /tmp/venv6w7cm2fg/requirements.txt (line 1)) (1.3.1)
+[2022-12-12 16:21:02,953] {process_utils.py:173} INFO - Requirement already satisfied: certifi>=2017.4.17 in /home/***/.local/lib/python3.7/site-packages (from requests<3,>=2.27.0->tweepy->-r /tmp/venv6w7cm2fg/requirements.txt (line 1)) (2020.12.5)
+[2022-12-12 16:21:02,954] {process_utils.py:173} INFO - Requirement already satisfied: idna<4,>=2.5 in /home/***/.local/lib/python3.7/site-packages (from requests<3,>=2.27.0->tweepy->-r /tmp/venv6w7cm2fg/requirements.txt (line 1)) (3.3)
+[2022-12-12 16:21:02,954] {process_utils.py:173} INFO - Requirement already satisfied: urllib3<1.27,>=1.21.1 in /home/***/.local/lib/python3.7/site-packages (from requests<3,>=2.27.0->tweepy->-r /tmp/venv6w7cm2fg/requirements.txt (line 1)) (1.26.9)
+[2022-12-12 16:21:02,955] {process_utils.py:173} INFO - Requirement already satisfied: charset-normalizer~=2.0.0 in /home/***/.local/lib/python3.7/site-packages (from requests<3,>=2.27.0->tweepy->-r /tmp/venv6w7cm2fg/requirements.txt (line 1)) (2.0.12)
+[2022-12-12 16:21:04,813] {process_utils.py:173} INFO - Installing collected packages: tweepy
+[2022-12-12 16:21:04,853] {process_utils.py:173} INFO - Successfully installed tweepy-4.12.1
+[2022-12-12 16:21:05,208] {process_utils.py:173} INFO - 
+[2022-12-12 16:21:05,209] {process_utils.py:173} INFO - [notice] A new release of pip available: 22.1.2 -> 22.3.1
+[2022-12-12 16:21:05,209] {process_utils.py:173} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2022-12-12 16:21:05,309] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202 AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+[2022-12-12 16:21:05,310] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202 AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+[2022-12-12 16:21:05,311] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202 AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+[2022-12-12 16:21:05,312] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202 AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+[2022-12-12 16:21:05,313] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202 AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+[2022-12-12 16:21:05,313] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202 AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+[2022-12-12 16:21:05,314] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202 AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+[2022-12-12 16:21:05,315] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202 AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+[2022-12-12 16:21:05,323] {process_utils.py:165} INFO - Executing cmd: /tmp/venv6w7cm2fg/bin/python /tmp/venv6w7cm2fg/script.py /tmp/venv6w7cm2fg/script.in /tmp/venv6w7cm2fg/script.out /tmp/venv6w7cm2fg/string_args.txt
+[2022-12-12 16:21:05,327] {process_utils.py:169} INFO - Output:
+[2022-12-12 16:21:05,511] {process_utils.py:173} INFO - Traceback (most recent call last):
+[2022-12-12 16:21:05,512] {process_utils.py:173} INFO -   File "/tmp/venv6w7cm2fg/script.py", line 38, in <module>
+[2022-12-12 16:21:05,512] {process_utils.py:173} INFO -     res = create_pdf(*arg_dict["args"], **arg_dict["kwargs"])
+[2022-12-12 16:21:05,513] {process_utils.py:173} INFO -   File "/tmp/venv6w7cm2fg/script.py", line 25, in create_pdf
+[2022-12-12 16:21:05,514] {process_utils.py:173} INFO -     pdf = PDF()
+[2022-12-12 16:21:05,514] {process_utils.py:173} INFO - NameError: name 'PDF' is not defined
+[2022-12-12 16:21:05,555] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 423, in execute
+    return super().execute(context=serializable_context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 479, in execute_callable
+    string_args_filename,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/process_utils.py", line 177, in execute_in_subprocess
+    raise subprocess.CalledProcessError(exit_code, cmd)
+subprocess.CalledProcessError: Command '['/tmp/venv6w7cm2fg/bin/python', '/tmp/venv6w7cm2fg/script.py', '/tmp/venv6w7cm2fg/script.in', '/tmp/venv6w7cm2fg/script.out', '/tmp/venv6w7cm2fg/string_args.txt']' returned non-zero exit status 1.
+[2022-12-12 16:21:05,566] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=daily_paper, task_id=create_pdf_task, execution_date=20221212T161952, start_date=20221212T162101, end_date=20221212T162105
+[2022-12-12 16:21:05,573] {standard_task_runner.py:97} ERROR - Failed to execute job 114 for task create_pdf_task (Command '['/tmp/venv6w7cm2fg/bin/python', '/tmp/venv6w7cm2fg/script.py', '/tmp/venv6w7cm2fg/script.in', '/tmp/venv6w7cm2fg/script.out', '/tmp/venv6w7cm2fg/string_args.txt']' returned non-zero exit status 1.; 2815)
+[2022-12-12 16:21:05,605] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-12-12 16:21:05,629] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

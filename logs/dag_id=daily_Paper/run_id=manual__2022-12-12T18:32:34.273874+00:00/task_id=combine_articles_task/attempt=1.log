@@ -1,0 +1,25 @@
+[2022-12-12 18:32:38,139] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.combine_articles_task manual__2022-12-12T18:32:34.273874+00:00 [queued]>
+[2022-12-12 18:32:38,149] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.combine_articles_task manual__2022-12-12T18:32:34.273874+00:00 [queued]>
+[2022-12-12 18:32:38,150] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 18:32:38,151] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-12 18:32:38,151] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 18:32:38,159] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): combine_articles_task> on 2022-12-12 18:32:34.273874+00:00
+[2022-12-12 18:32:38,162] {standard_task_runner.py:52} INFO - Started process 2554 to run task
+[2022-12-12 18:32:38,166] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'daily_paper', 'combine_articles_task', 'manual__2022-12-12T18:32:34.273874+00:00', '--job-id', '394', '--raw', '--subdir', 'DAGS_FOLDER/morning-paper.py', '--cfg-path', '/tmp/tmpgvzbw84h', '--error-file', '/tmp/tmpb35hp_72']
+[2022-12-12 18:32:38,168] {standard_task_runner.py:80} INFO - Job 394: Subtask combine_articles_task
+[2022-12-12 18:32:38,208] {task_command.py:369} INFO - Running <TaskInstance: daily_paper.combine_articles_task manual__2022-12-12T18:32:34.273874+00:00 [running]> on host 6bb81baa0a52
+[2022-12-12 18:32:38,256] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=akash.khamkar40@gmail.com
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=daily_paper
+AIRFLOW_CTX_TASK_ID=combine_articles_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-12T18:32:34.273874+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-12T18:32:34.273874+00:00
+[2022-12-12 18:32:38,284] {logging_mixin.py:115} INFO - {'joke': "Debugging is like being the detective in a crime movie where you're also the murderer at the same time.", 'quote': 'Most people achieved their greatest success one step beyond what looked like their greatest failure.', 'news': [{'title': 'Mamata Banerjee kicks off poll campaign in Meghalaya', 'published_date': '2022-12-12 18:03:32', 'summary': 'Banerjee was accompanied by AITC National General Secretary Abhishek Banerjee, who is visiting the state for the third time. During her two-day visit, she will be attending a series of events accompanied by Meghalaya Trinamool Congress leaders.'}, {'title': 'GOVERNMENT NEW LAW COLLEGE CASE: ABVP demands judicial inquiry', 'published_date': '2022-12-12 18:03:28', 'summary': 'None'}, {'title': 'Lionel Messi, Luka Modric carry Argentina, Croatia into World Cup semis', 'published_date': '2022-12-12 18:03:10', 'summary': "Momentum is building behind Messi's push to cap his career with the biggest prize in the game. The 35-year-old Argentina playmaker has carried his team to the semifinals, almost in the same way Diego Maradona — the man with whom Messi is so often compared — led the South American nation to its second and most recent World Cup title in 1986."}], 'meme': 'https://redd.it/zk0jr2'}
+[2022-12-12 18:32:38,284] {python.py:173} INFO - Done. Returned value was: {'joke': "Debugging is like being the detective in a crime movie where you're also the murderer at the same time.", 'quote': 'Most people achieved their greatest success one step beyond what looked like their greatest failure.', 'news': [{'title': 'Mamata Banerjee kicks off poll campaign in Meghalaya', 'published_date': '2022-12-12 18:03:32', 'summary': 'Banerjee was accompanied by AITC National General Secretary Abhishek Banerjee, who is visiting the state for the third time. During her two-day visit, she will be attending a series of events accompanied by Meghalaya Trinamool Congress leaders.'}, {'title': 'GOVERNMENT NEW LAW COLLEGE CASE: ABVP demands judicial inquiry', 'published_date': '2022-12-12 18:03:28', 'summary': 'None'}, {'title': 'Lionel Messi, Luka Modric carry Argentina, Croatia into World Cup semis', 'published_date': '2022-12-12 18:03:10', 'summary': "Momentum is building behind Messi's push to cap his career with the biggest prize in the game. The 35-year-old Argentina playmaker has carried his team to the semifinals, almost in the same way Diego Maradona — the man with whom Messi is so often compared — led the South American nation to its second and most recent World Cup title in 1986."}], 'meme': 'https://redd.it/zk0jr2'}
+[2022-12-12 18:32:38,304] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=daily_paper, task_id=combine_articles_task, execution_date=20221212T183234, start_date=20221212T183238, end_date=20221212T183238
+[2022-12-12 18:32:38,340] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-12 18:32:38,364] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,25 @@
+[2022-12-12 16:51:50,009] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.get_joke_task manual__2022-12-12T16:51:49.321224+00:00 [queued]>
+[2022-12-12 16:51:50,014] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.get_joke_task manual__2022-12-12T16:51:49.321224+00:00 [queued]>
+[2022-12-12 16:51:50,015] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 16:51:50,015] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-12 16:51:50,016] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 16:51:50,023] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_joke_task> on 2022-12-12 16:51:49.321224+00:00
+[2022-12-12 16:51:50,027] {standard_task_runner.py:52} INFO - Started process 360 to run task
+[2022-12-12 16:51:50,032] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'daily_paper', 'get_joke_task', 'manual__2022-12-12T16:51:49.321224+00:00', '--job-id', '178', '--raw', '--subdir', 'DAGS_FOLDER/morning-paper.py', '--cfg-path', '/tmp/tmp4tl4rtvd', '--error-file', '/tmp/tmptd6bybz1']
+[2022-12-12 16:51:50,034] {standard_task_runner.py:80} INFO - Job 178: Subtask get_joke_task
+[2022-12-12 16:51:50,106] {task_command.py:369} INFO - Running <TaskInstance: daily_paper.get_joke_task manual__2022-12-12T16:51:49.321224+00:00 [running]> on host 6bb81baa0a52
+[2022-12-12 16:51:50,214] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=akash.khamkar40@gmail.com
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=daily_paper
+AIRFLOW_CTX_TASK_ID=get_joke_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-12T16:51:49.321224+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-12T16:51:49.321224+00:00
+[2022-12-12 16:51:51,495] {logging_mixin.py:115} INFO - {'error': False, 'category': 'Misc', 'type': 'single', 'joke': 'Stop being homophobic and rude to the LGBTQ+ community. You should be thanking them for saving us plenty of room in heaven.', 'flags': {'nsfw': False, 'religious': True, 'political': False, 'racist': False, 'sexist': False, 'explicit': False}, 'id': 114, 'safe': False, 'lang': 'en'}
+[2022-12-12 16:51:51,495] {python.py:173} INFO - Done. Returned value was: Stop being homophobic and rude to the LGBTQ+ community. You should be thanking them for saving us plenty of room in heaven.
+[2022-12-12 16:51:51,516] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=daily_paper, task_id=get_joke_task, execution_date=20221212T165149, start_date=20221212T165150, end_date=20221212T165151
+[2022-12-12 16:51:51,568] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-12 16:51:51,596] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

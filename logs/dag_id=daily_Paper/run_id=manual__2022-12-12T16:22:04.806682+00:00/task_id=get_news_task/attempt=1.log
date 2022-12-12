@@ -1,0 +1,24 @@
+[2022-12-12 16:22:06,069] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.get_news_task manual__2022-12-12T16:22:04.806682+00:00 [queued]>
+[2022-12-12 16:22:06,075] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_paper.get_news_task manual__2022-12-12T16:22:04.806682+00:00 [queued]>
+[2022-12-12 16:22:06,075] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 16:22:06,076] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-12 16:22:06,076] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 16:22:06,089] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_news_task> on 2022-12-12 16:22:04.806682+00:00
+[2022-12-12 16:22:06,092] {standard_task_runner.py:52} INFO - Started process 2851 to run task
+[2022-12-12 16:22:06,097] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'daily_paper', 'get_news_task', 'manual__2022-12-12T16:22:04.806682+00:00', '--job-id', '118', '--raw', '--subdir', 'DAGS_FOLDER/morning-paper.py', '--cfg-path', '/tmp/tmpde0e9v2j', '--error-file', '/tmp/tmpbjjof10h']
+[2022-12-12 16:22:06,099] {standard_task_runner.py:80} INFO - Job 118: Subtask get_news_task
+[2022-12-12 16:22:06,196] {task_command.py:369} INFO - Running <TaskInstance: daily_paper.get_news_task manual__2022-12-12T16:22:04.806682+00:00 [running]> on host cbcd6542cb8e
+[2022-12-12 16:22:06,298] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=akash.khamkar40@gmail.com
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=daily_paper
+AIRFLOW_CTX_TASK_ID=get_news_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-12T16:22:04.806682+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-12T16:22:04.806682+00:00
+[2022-12-12 16:22:06,998] {python.py:173} INFO - Done. Returned value was: [{'title': 'Number of Korean newlyweds falls at its sharpest rate yet', 'published_date': '2022-12-12 16:22:00', 'summary': 'A shopper walks by a wedding dress shop in Ahyeon-dong, Mapo District, western Seoul, on March 17, 2022. [YONHAP] The total number of newlyweds in Korea last year dropped 7 percent on year, the sharpest decline since related data began to be complied in 2016. Covid-19 was considered to be the biggest factor behind the sharp decline, though the changing social perception of marriage was also considered to play a significant role. According to Statistics Korea on Monday, last year there were 1.1 million newlyweds, defined as couples that have been married five years or less and in which at least one person is a Korean.'}, {'title': 'Bilkis Bano review petition to be listed before Bench for consideration through circulation, says SC', 'published_date': '2022-12-12 16:22:00', 'summary': "Bilkis Bano has sought a review of the Supreme Court judgment which had paved the way for the Gujarat government to consider and release 11 convicts serving life sentence in her case Sabrangindia\n\n 12 Dec 2022 Counsel for Bilkis Bano, a gang-rape survivor in the Gujarat riots, on December 12 made an urgent mentioning before the Supreme Court for an early listing of her review petition. Bilkis Bano has sought a review of a Supreme Court judgment of May 2022. The judgment had paved the way for the Gujarat government to consider and thereafter\xa0\xa0release 11 convicts serving life sentence\xa0in her case under the State's Premature Release Policy of 1992."}, {'title': 'Essential Services in Wutung funded', 'published_date': '2022-12-12 16:22:00', 'summary': "The National Government through the ministry would fund the bore water supply system and sort out land proposed for the Trade Centre at Wutung while the provincial government would get the power lines from Vanimo to Wutung.\n'PNG Power Limited had failed us by not getting the power lines from Vanimo and Wutung though we released funds for that when I was the Minister for National Planning and Monitoring in 2018,' said Maru.\nHe urged the provincial government to start working on the power lines as soon as possible."}]
+[2022-12-12 16:22:07,049] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=daily_paper, task_id=get_news_task, execution_date=20221212T162204, start_date=20221212T162206, end_date=20221212T162207
+[2022-12-12 16:22:07,068] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-12 16:22:07,100] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

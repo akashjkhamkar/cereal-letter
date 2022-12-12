@@ -1,0 +1,25 @@
+[2022-12-12 14:07:46,007] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_Paper.get_quote_task manual__2022-12-12T14:07:45.088001+00:00 [queued]>
+[2022-12-12 14:07:46,015] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_Paper.get_quote_task manual__2022-12-12T14:07:45.088001+00:00 [queued]>
+[2022-12-12 14:07:46,016] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 14:07:46,016] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-12 14:07:46,017] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 14:07:46,028] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_quote_task> on 2022-12-12 14:07:45.088001+00:00
+[2022-12-12 14:07:46,035] {standard_task_runner.py:52} INFO - Started process 1571 to run task
+[2022-12-12 14:07:46,049] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'daily_Paper', 'get_quote_task', 'manual__2022-12-12T14:07:45.088001+00:00', '--job-id', '91', '--raw', '--subdir', 'DAGS_FOLDER/morning-paper.py', '--cfg-path', '/tmp/tmpqu2zrpp6', '--error-file', '/tmp/tmpqqhh3r68']
+[2022-12-12 14:07:46,052] {standard_task_runner.py:80} INFO - Job 91: Subtask get_quote_task
+[2022-12-12 14:07:46,117] {task_command.py:369} INFO - Running <TaskInstance: daily_Paper.get_quote_task manual__2022-12-12T14:07:45.088001+00:00 [running]> on host cbcd6542cb8e
+[2022-12-12 14:07:46,185] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=akash.khamkar40@gmail.com
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=daily_Paper
+AIRFLOW_CTX_TASK_ID=get_quote_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-12T14:07:45.088001+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-12T14:07:45.088001+00:00
+[2022-12-12 14:07:47,643] {logging_mixin.py:115} INFO - [{'q': 'Most people achieved their greatest success one step beyond what looked like their greatest failure.', 'a': 'Brian Tracy', 'h': '<blockquote>&ldquo;Most people achieved their greatest success one step beyond what looked like their greatest failure.&rdquo; &mdash; <footer>Brian Tracy</footer></blockquote>'}]
+[2022-12-12 14:07:47,644] {python.py:173} INFO - Done. Returned value was: Most people achieved their greatest success one step beyond what looked like their greatest failure.
+[2022-12-12 14:07:47,666] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=daily_Paper, task_id=get_quote_task, execution_date=20221212T140745, start_date=20221212T140746, end_date=20221212T140747
+[2022-12-12 14:07:47,702] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-12 14:07:47,728] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
