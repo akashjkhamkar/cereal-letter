@@ -62,11 +62,11 @@ extraction_tasks.append(PythonOperator(
 #     dag=dag
 # ))
 
-extraction_tasks.append(PythonOperator(
-    task_id='get_meme_task',
-    python_callable=get_meme,
-    dag=dag
-))
+# extraction_tasks.append(PythonOperator(
+#     task_id='get_meme_task',
+#     python_callable=get_meme,
+#     dag=dag
+# ))
 
 extraction_tasks.append(PythonOperator(
     task_id='get_songs_from_db_task',

@@ -1,1 +1,5 @@
 .env
+mongo_db_data
+postgres_db_data
+temp
+logs
