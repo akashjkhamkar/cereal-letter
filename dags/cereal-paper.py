@@ -14,6 +14,7 @@ from cereal_paper_src.combine import combine_articles
 from cereal_paper_src.song import get_song, get_songs_from_db
 from cereal_paper_src.meme import get_meme
 from cereal_paper_src.pdf import create_pdf
+from cereal_paper_src.mongo_utils import save_to_db
 
 default_args = {
     'owner': 'akashk',
@@ -74,18 +75,25 @@ extraction_tasks.append(PythonOperator(
     dag=dag
 ))
 
-combine_articles = PythonOperator(
+combine_all_articles = PythonOperator(
     task_id='combine_articles_task', 
     python_callable=combine_articles,
     provide_context=True,
     dag=dag
 )
 
-create_pdf = PythonOperator(
+save_letter_to_db = PythonOperator(
+    task_id='save_to_db_task',
+    python_callable=save_to_db,
+    provide_context=True,
+    dag=dag
+)
+
+create_the_letter_pdf = PythonOperator(
     task_id='create_pdf_task',
     python_callable=create_pdf,
     provide_context=True,
     dag=dag
 )
 
-extraction_tasks >> combine_articles >> create_pdf
+extraction_tasks >> combine_all_articles >> [create_the_letter_pdf, save_letter_to_db]
