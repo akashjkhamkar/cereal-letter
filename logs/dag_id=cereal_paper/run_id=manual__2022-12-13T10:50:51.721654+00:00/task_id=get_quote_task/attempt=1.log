@@ -1,0 +1,25 @@
+[2022-12-13 10:50:53,212] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.get_quote_task manual__2022-12-13T10:50:51.721654+00:00 [queued]>
+[2022-12-13 10:50:53,220] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.get_quote_task manual__2022-12-13T10:50:51.721654+00:00 [queued]>
+[2022-12-13 10:50:53,220] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 10:50:53,221] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-13 10:50:53,221] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 10:50:53,230] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_quote_task> on 2022-12-13 10:50:51.721654+00:00
+[2022-12-13 10:50:53,234] {standard_task_runner.py:52} INFO - Started process 310 to run task
+[2022-12-13 10:50:53,237] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'cereal_paper', 'get_quote_task', 'manual__2022-12-13T10:50:51.721654+00:00', '--job-id', '118', '--raw', '--subdir', 'DAGS_FOLDER/cereal-paper.py', '--cfg-path', '/tmp/tmp7t3hv3gf', '--error-file', '/tmp/tmpsu9djryk']
+[2022-12-13 10:50:53,238] {standard_task_runner.py:80} INFO - Job 118: Subtask get_quote_task
+[2022-12-13 10:50:53,342] {task_command.py:369} INFO - Running <TaskInstance: cereal_paper.get_quote_task manual__2022-12-13T10:50:51.721654+00:00 [running]> on host 43dbd6b00d73
+[2022-12-13 10:50:53,522] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=cerealman@akashkhamkar.in
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=cereal_paper
+AIRFLOW_CTX_TASK_ID=get_quote_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-13T10:50:51.721654+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-13T10:50:51.721654+00:00
+[2022-12-13 10:50:54,596] {logging_mixin.py:115} INFO - [{'q': 'Curiosity is the most powerful thing you own. Imagination is a force that can actually manifest a reality.', 'a': 'James Cameron', 'h': '<blockquote>&ldquo;Curiosity is the most powerful thing you own. Imagination is a force that can actually manifest a reality.&rdquo; &mdash; <footer>James Cameron</footer></blockquote>'}]
+[2022-12-13 10:50:54,597] {python.py:173} INFO - Done. Returned value was: Curiosity is the most powerful thing you own. Imagination is a force that can actually manifest a reality.
+[2022-12-13 10:50:54,763] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=cereal_paper, task_id=get_quote_task, execution_date=20221213T105051, start_date=20221213T105053, end_date=20221213T105054
+[2022-12-13 10:50:54,886] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-13 10:50:54,957] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,26 @@
+[2022-12-13 07:59:26,721] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.create_pdf_task manual__2022-12-13T07:59:22.889269+00:00 [queued]>
+[2022-12-13 07:59:26,728] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.create_pdf_task manual__2022-12-13T07:59:22.889269+00:00 [queued]>
+[2022-12-13 07:59:26,728] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 07:59:26,728] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-13 07:59:26,729] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 07:59:26,738] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): create_pdf_task> on 2022-12-13 07:59:22.889269+00:00
+[2022-12-13 07:59:26,740] {standard_task_runner.py:52} INFO - Started process 449 to run task
+[2022-12-13 07:59:26,744] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'cereal_paper', 'create_pdf_task', 'manual__2022-12-13T07:59:22.889269+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/cereal-paper.py', '--cfg-path', '/tmp/tmpv46_mckv', '--error-file', '/tmp/tmpp1jquz7c']
+[2022-12-13 07:59:26,745] {standard_task_runner.py:80} INFO - Job 62: Subtask create_pdf_task
+[2022-12-13 07:59:26,808] {task_command.py:369} INFO - Running <TaskInstance: cereal_paper.create_pdf_task manual__2022-12-13T07:59:22.889269+00:00 [running]> on host 5029e27bd97f
+[2022-12-13 07:59:26,899] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=akash.khamkar40@gmail.com
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=cereal_paper
+AIRFLOW_CTX_TASK_ID=create_pdf_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-13T07:59:22.889269+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-13T07:59:22.889269+00:00
+[2022-12-13 07:59:27,135] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/fpdf/ttfonts.py:831 UserWarning: missing glyph 369
+[2022-12-13 07:59:27,136] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/fpdf/ttfonts.py:710 UserWarning: missing glyph 369
+[2022-12-13 07:59:27,155] {python.py:173} INFO - Done. Returned value was: None
+[2022-12-13 07:59:27,175] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=cereal_paper, task_id=create_pdf_task, execution_date=20221213T075922, start_date=20221213T075926, end_date=20221213T075927
+[2022-12-13 07:59:27,200] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-13 07:59:27,241] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

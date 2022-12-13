@@ -1,0 +1,24 @@
+[2022-12-13 10:53:15,905] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.get_news_task manual__2022-12-13T10:53:15.322673+00:00 [queued]>
+[2022-12-13 10:53:15,914] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.get_news_task manual__2022-12-13T10:53:15.322673+00:00 [queued]>
+[2022-12-13 10:53:15,914] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 10:53:15,914] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-13 10:53:15,915] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 10:53:15,924] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_news_task> on 2022-12-13 10:53:15.322673+00:00
+[2022-12-13 10:53:15,929] {standard_task_runner.py:52} INFO - Started process 198 to run task
+[2022-12-13 10:53:15,934] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'cereal_paper', 'get_news_task', 'manual__2022-12-13T10:53:15.322673+00:00', '--job-id', '127', '--raw', '--subdir', 'DAGS_FOLDER/cereal-paper.py', '--cfg-path', '/tmp/tmpta8kz3je', '--error-file', '/tmp/tmpek81su9s']
+[2022-12-13 10:53:15,935] {standard_task_runner.py:80} INFO - Job 127: Subtask get_news_task
+[2022-12-13 10:53:16,124] {task_command.py:369} INFO - Running <TaskInstance: cereal_paper.get_news_task manual__2022-12-13T10:53:15.322673+00:00 [running]> on host 5cb924e8b79e
+[2022-12-13 10:53:16,319] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=cerealman@akashkhamkar.in
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=cereal_paper
+AIRFLOW_CTX_TASK_ID=get_news_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-13T10:53:15.322673+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-13T10:53:15.322673+00:00
+[2022-12-13 10:53:18,124] {python.py:173} INFO - Done. Returned value was: [{'title': 'Harrier CBD Gummies: Is It Safe Or Not? Dolly Parton CBD Gummies Work Exposed, Tyler Perry CBD Gummies Price', 'published_date': '2022-12-13 10:42:42', 'summary': 'Harrier CBD Gummies are very effective gummies which never gives you any side effects and Dolly Parton CBD Gummies is helpful in reducing all the different health issues.'}, {'title': 'WA mum could lose thumb after manicure went wrong', 'published_date': '2022-12-13 10:42:25', 'summary': 'A Western Australian mother could lose her thumb after a simple manicure went horribly wrong.'}, {'title': 'Re-Live The Most Iconic Wedding Moments From These Evergreen Titles On Disney+ Hotstar', 'published_date': '2022-12-13 10:42:17', 'summary': 'From the red wedding in the ‘House Of The Dragon’ to the iconic bridal themes in ‘27 Dresses’, relive these memorable scenes from the best of the titles on Disney+ Hotstar.'}]
+[2022-12-13 10:53:18,194] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=cereal_paper, task_id=get_news_task, execution_date=20221213T105315, start_date=20221213T105315, end_date=20221213T105318
+[2022-12-13 10:53:18,231] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-13 10:53:18,279] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

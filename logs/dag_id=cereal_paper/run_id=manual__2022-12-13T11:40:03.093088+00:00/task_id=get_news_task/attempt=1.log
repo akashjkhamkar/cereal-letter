@@ -1,0 +1,24 @@
+[2022-12-13 11:40:03,722] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.get_news_task manual__2022-12-13T11:40:03.093088+00:00 [queued]>
+[2022-12-13 11:40:03,732] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.get_news_task manual__2022-12-13T11:40:03.093088+00:00 [queued]>
+[2022-12-13 11:40:03,733] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 11:40:03,733] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-13 11:40:03,734] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 11:40:03,744] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_news_task> on 2022-12-13 11:40:03.093088+00:00
+[2022-12-13 11:40:03,755] {standard_task_runner.py:52} INFO - Started process 610 to run task
+[2022-12-13 11:40:03,759] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'cereal_paper', 'get_news_task', 'manual__2022-12-13T11:40:03.093088+00:00', '--job-id', '192', '--raw', '--subdir', 'DAGS_FOLDER/cereal-paper.py', '--cfg-path', '/tmp/tmpnbfv8wz4', '--error-file', '/tmp/tmpajc2dvpb']
+[2022-12-13 11:40:03,762] {standard_task_runner.py:80} INFO - Job 192: Subtask get_news_task
+[2022-12-13 11:40:03,940] {task_command.py:369} INFO - Running <TaskInstance: cereal_paper.get_news_task manual__2022-12-13T11:40:03.093088+00:00 [running]> on host 44822d5113ae
+[2022-12-13 11:40:04,104] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=cerealman@akashkhamkar.in
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=cereal_paper
+AIRFLOW_CTX_TASK_ID=get_news_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-13T11:40:03.093088+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-13T11:40:03.093088+00:00
+[2022-12-13 11:40:15,087] {python.py:173} INFO - Done. Returned value was: [{'title': 'GIG Bahrain is first insurance firm to accept crypto payments', 'published_date': '2022-12-13 11:28:53', 'summary': "These services include providing GIG Bahrain with state-of-the-art Point-of-Sale (POS) Terminals placed at its outlets to accept all types of Debit and Credit cards from Visa & MasterCard, including the acceptance of the latest method of payment using Crypto assets via ‘Binance App'"}, {'title': 'FCRA licence of 1,811 NGOs cancelled in 3 yrs', 'published_date': '2022-12-13 11:28:12', 'summary': 'None'}, {'title': 'NWC to start work on $1.1bln Saudi desalination projects', 'published_date': '2022-12-13 11:27:27', 'summary': 'The project scope includes implementation of more than 316 km of conveyor and main lines, and the construction of operational reservoirs with a capacity of 1.5 million cu m in addition to projects to improve water networks'}]
+[2022-12-13 11:40:15,162] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=cereal_paper, task_id=get_news_task, execution_date=20221213T114003, start_date=20221213T114003, end_date=20221213T114015
+[2022-12-13 11:40:15,187] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-13 11:40:15,235] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

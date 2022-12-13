@@ -1,0 +1,24 @@
+[2022-12-13 10:56:07,859] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.get_news_task manual__2022-12-13T10:56:06.725838+00:00 [queued]>
+[2022-12-13 10:56:07,889] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.get_news_task manual__2022-12-13T10:56:06.725838+00:00 [queued]>
+[2022-12-13 10:56:07,890] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 10:56:07,891] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-13 10:56:07,892] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 10:56:07,911] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_news_task> on 2022-12-13 10:56:06.725838+00:00
+[2022-12-13 10:56:07,916] {standard_task_runner.py:52} INFO - Started process 255 to run task
+[2022-12-13 10:56:07,924] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'cereal_paper', 'get_news_task', 'manual__2022-12-13T10:56:06.725838+00:00', '--job-id', '138', '--raw', '--subdir', 'DAGS_FOLDER/cereal-paper.py', '--cfg-path', '/tmp/tmpozbqzd6t', '--error-file', '/tmp/tmpl3yze9od']
+[2022-12-13 10:56:07,932] {standard_task_runner.py:80} INFO - Job 138: Subtask get_news_task
+[2022-12-13 10:56:08,086] {task_command.py:369} INFO - Running <TaskInstance: cereal_paper.get_news_task manual__2022-12-13T10:56:06.725838+00:00 [running]> on host 5cb924e8b79e
+[2022-12-13 10:56:08,201] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=cerealman@akashkhamkar.in
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=cereal_paper
+AIRFLOW_CTX_TASK_ID=get_news_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-13T10:56:06.725838+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-13T10:56:06.725838+00:00
+[2022-12-13 10:56:09,641] {python.py:173} INFO - Done. Returned value was: [{'title': 'India Women vs Australia Women Third T20I Live Streaming: When and Where to Watch India Women vs Australia Women Live', 'published_date': '2022-12-13 10:44:47', 'summary': 'Know when and where to watch the live streaming online of the 3rd T20I between India Women vs Australia Women'}, {'title': 'Cyberpunk 2077: Phantom Liberty laut Elba mit „tiefgründigster Erzählung aller Zeiten“', 'published_date': '2022-12-13 10:43:37', 'summary': 'Bei den Game Awards 2022, die in der Nacht vom 8. auf den 9. Dezember ausgestrahlt wurden, gab es auch […] Quelle'}, {'title': 'Govinda Naam Mera to The Recruit: OTT movies this Week', 'published_date': '2022-12-13 10:42:52', 'summary': '<p>New Delhi: Bored already and thinking how to spend the rest of the days? Then we have some plans for you. From Govinda Naam Mera to Parineeti Chopra’s Code Name: Tiranga, this week the OTT platforms have a lot to serve us with action thrillers to rom-coms. Here is a list of the movies that […]</p> <p>The post <a rel="nofollow" href="https://news24online.com/entertainment/govinda-naam-mera-to-the-recruit-ott-movies-this-week/70271/">Govinda Naam Mera to The Recruit: OTT movies this Week</a> appeared first on <a rel="nofollow" href="https://news24online.com">News24 English</a>.</p>'}]
+[2022-12-13 10:56:09,700] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=cereal_paper, task_id=get_news_task, execution_date=20221213T105606, start_date=20221213T105607, end_date=20221213T105609
+[2022-12-13 10:56:09,829] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-13 10:56:09,874] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

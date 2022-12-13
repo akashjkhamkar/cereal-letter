@@ -1,0 +1,25 @@
+[2022-12-13 07:53:47,284] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.get_songs_from_db_task manual__2022-12-13T07:53:46.475057+00:00 [queued]>
+[2022-12-13 07:53:47,292] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.get_songs_from_db_task manual__2022-12-13T07:53:46.475057+00:00 [queued]>
+[2022-12-13 07:53:47,293] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 07:53:47,294] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-13 07:53:47,294] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 07:53:47,305] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_songs_from_db_task> on 2022-12-13 07:53:46.475057+00:00
+[2022-12-13 07:53:47,312] {standard_task_runner.py:52} INFO - Started process 322 to run task
+[2022-12-13 07:53:47,318] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'cereal_paper', 'get_songs_from_db_task', 'manual__2022-12-13T07:53:46.475057+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/cereal-paper.py', '--cfg-path', '/tmp/tmppa4xglod', '--error-file', '/tmp/tmptr8z2mc0']
+[2022-12-13 07:53:47,320] {standard_task_runner.py:80} INFO - Job 36: Subtask get_songs_from_db_task
+[2022-12-13 07:53:47,489] {task_command.py:369} INFO - Running <TaskInstance: cereal_paper.get_songs_from_db_task manual__2022-12-13T07:53:46.475057+00:00 [running]> on host 5029e27bd97f
+[2022-12-13 07:53:47,615] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=akash.khamkar40@gmail.com
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=cereal_paper
+AIRFLOW_CTX_TASK_ID=get_songs_from_db_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-13T07:53:46.475057+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-13T07:53:46.475057+00:00
+[2022-12-13 07:53:47,619] {base.py:68} INFO - Using connection ID 'my_postgres_default' for task execution.
+[2022-12-13 07:53:47,632] {python.py:173} INFO - Done. Returned value was: [('Jo Bhi Main', 'Rockstar', 'Mohit Chauhan'), ('Romeo And Juliet', 'Making Movies', 'Dire Straits'), ('Phantom', 'My Head Is An Animal (10th Anniversary Edition)', 'Of Monsters and Men')]
+[2022-12-13 07:53:47,676] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=cereal_paper, task_id=get_songs_from_db_task, execution_date=20221213T075346, start_date=20221213T075347, end_date=20221213T075347
+[2022-12-13 07:53:47,695] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-13 07:53:47,739] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

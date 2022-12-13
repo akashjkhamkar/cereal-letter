@@ -1,0 +1,25 @@
+[2022-12-13 10:46:08,948] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.send_email manual__2022-12-13T10:46:02.615461+00:00 [queued]>
+[2022-12-13 10:46:08,957] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.send_email manual__2022-12-13T10:46:02.615461+00:00 [queued]>
+[2022-12-13 10:46:08,957] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 10:46:08,957] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-13 10:46:08,958] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 10:46:08,966] {taskinstance.py:1377} INFO - Executing <Task(EmailOperator): send_email> on 2022-12-13 10:46:02.615461+00:00
+[2022-12-13 10:46:08,971] {standard_task_runner.py:52} INFO - Started process 254 to run task
+[2022-12-13 10:46:08,975] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'cereal_paper', 'send_email', 'manual__2022-12-13T10:46:02.615461+00:00', '--job-id', '113', '--raw', '--subdir', 'DAGS_FOLDER/cereal-paper.py', '--cfg-path', '/tmp/tmp4rr96e87', '--error-file', '/tmp/tmpyvuagmr3']
+[2022-12-13 10:46:08,976] {standard_task_runner.py:80} INFO - Job 113: Subtask send_email
+[2022-12-13 10:46:09,043] {task_command.py:369} INFO - Running <TaskInstance: cereal_paper.send_email manual__2022-12-13T10:46:02.615461+00:00 [running]> on host 43dbd6b00d73
+[2022-12-13 10:46:09,122] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=cerealman@akashkhamkar.in
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=cereal_paper
+AIRFLOW_CTX_TASK_ID=send_email
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-13T10:46:02.615461+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-13T10:46:02.615461+00:00
+[2022-12-13 10:46:09,230] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/providers/sendgrid/utils/emailer.py:122 PendingDeprecationWarning: Fetching Sendgrid credentials from environment variables will be deprecated in a future release. Please set credentials using a connection instead.
+[2022-12-13 10:46:10,772] {emailer.py:147} INFO - Email with subject cereal bro here is successfully sent to recipients: [{'to': [{'email': 'akash.khamkar40@gmail.com'}]}]
+[2022-12-13 10:46:10,827] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=cereal_paper, task_id=send_email, execution_date=20221213T104602, start_date=20221213T104608, end_date=20221213T104610
+[2022-12-13 10:46:10,875] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-13 10:46:10,935] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

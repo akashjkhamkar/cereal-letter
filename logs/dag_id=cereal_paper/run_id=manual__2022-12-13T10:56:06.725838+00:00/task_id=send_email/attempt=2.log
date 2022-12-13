@@ -1,0 +1,57 @@
+[2022-12-13 10:57:14,918] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.send_email manual__2022-12-13T10:56:06.725838+00:00 [queued]>
+[2022-12-13 10:57:14,926] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.send_email manual__2022-12-13T10:56:06.725838+00:00 [queued]>
+[2022-12-13 10:57:14,926] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 10:57:14,927] {taskinstance.py:1357} INFO - Starting attempt 2 of 2
+[2022-12-13 10:57:14,927] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 10:57:14,935] {taskinstance.py:1377} INFO - Executing <Task(EmailOperator): send_email> on 2022-12-13 10:56:06.725838+00:00
+[2022-12-13 10:57:14,939] {standard_task_runner.py:52} INFO - Started process 278 to run task
+[2022-12-13 10:57:14,943] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'cereal_paper', 'send_email', 'manual__2022-12-13T10:56:06.725838+00:00', '--job-id', '143', '--raw', '--subdir', 'DAGS_FOLDER/cereal-paper.py', '--cfg-path', '/tmp/tmpjqkb4ww8', '--error-file', '/tmp/tmpihqbtq1d']
+[2022-12-13 10:57:14,946] {standard_task_runner.py:80} INFO - Job 143: Subtask send_email
+[2022-12-13 10:57:15,021] {task_command.py:369} INFO - Running <TaskInstance: cereal_paper.send_email manual__2022-12-13T10:56:06.725838+00:00 [running]> on host 5cb924e8b79e
+[2022-12-13 10:57:15,094] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=cerealman@akashkhamkar.in
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=cereal_paper
+AIRFLOW_CTX_TASK_ID=send_email
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-13T10:56:06.725838+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-13T10:56:06.725838+00:00
+[2022-12-13 10:57:15,279] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/providers/sendgrid/utils/emailer.py:122 PendingDeprecationWarning: Fetching Sendgrid credentials from environment variables will be deprecated in a future release. Please set credentials using a connection instead.
+[2022-12-13 10:57:16,726] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/email.py", line 85, in execute
+    custom_headers=self.custom_headers,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 71, in send_email
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/sendgrid/utils/emailer.py", line 122, in send_email
+    _post_sendgrid_mail(mail.get(), conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/sendgrid/utils/emailer.py", line 141, in _post_sendgrid_mail
+    response = sendgrid_client.client.mail.send.post(request_body=mail_data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/python_http_client/client.py", line 277, in http_request
+    self._make_request(opener, request, timeout=timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/python_http_client/client.py", line 184, in _make_request
+    raise exc
+python_http_client.exceptions.UnauthorizedError: HTTP Error 401: Unauthorized
+[2022-12-13 10:57:16,775] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=cereal_paper, task_id=send_email, execution_date=20221213T105606, start_date=20221213T105714, end_date=20221213T105716
+[2022-12-13 10:57:20,616] {taskinstance.py:1944} ERROR - Failed to send email to: cerealman@akashkhamkar.in
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1942, in handle_failure
+    self.email_alert(error, task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 2318, in email_alert
+    send_email(task.email, subject, html_content_err)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 71, in send_email
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/sendgrid/utils/emailer.py", line 122, in send_email
+    _post_sendgrid_mail(mail.get(), conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/sendgrid/utils/emailer.py", line 141, in _post_sendgrid_mail
+    response = sendgrid_client.client.mail.send.post(request_body=mail_data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/python_http_client/client.py", line 277, in http_request
+    self._make_request(opener, request, timeout=timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/python_http_client/client.py", line 184, in _make_request
+    raise exc
+python_http_client.exceptions.UnauthorizedError: HTTP Error 401: Unauthorized
+[2022-12-13 10:57:20,675] {standard_task_runner.py:97} ERROR - Failed to execute job 143 for task send_email (HTTP Error 401: Unauthorized; 278)
+[2022-12-13 10:57:20,732] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-12-13 10:57:20,775] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

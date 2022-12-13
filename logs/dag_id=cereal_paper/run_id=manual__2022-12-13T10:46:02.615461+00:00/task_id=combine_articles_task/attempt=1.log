@@ -1,0 +1,25 @@
+[2022-12-13 10:46:07,060] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.combine_articles_task manual__2022-12-13T10:46:02.615461+00:00 [queued]>
+[2022-12-13 10:46:07,067] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.combine_articles_task manual__2022-12-13T10:46:02.615461+00:00 [queued]>
+[2022-12-13 10:46:07,067] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 10:46:07,067] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-13 10:46:07,068] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 10:46:07,076] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): combine_articles_task> on 2022-12-13 10:46:02.615461+00:00
+[2022-12-13 10:46:07,079] {standard_task_runner.py:52} INFO - Started process 245 to run task
+[2022-12-13 10:46:07,082] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'cereal_paper', 'combine_articles_task', 'manual__2022-12-13T10:46:02.615461+00:00', '--job-id', '110', '--raw', '--subdir', 'DAGS_FOLDER/cereal-paper.py', '--cfg-path', '/tmp/tmprszexx3e', '--error-file', '/tmp/tmpssssj5ja']
+[2022-12-13 10:46:07,083] {standard_task_runner.py:80} INFO - Job 110: Subtask combine_articles_task
+[2022-12-13 10:46:07,143] {task_command.py:369} INFO - Running <TaskInstance: cereal_paper.combine_articles_task manual__2022-12-13T10:46:02.615461+00:00 [running]> on host 43dbd6b00d73
+[2022-12-13 10:46:07,211] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=cerealman@akashkhamkar.in
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=cereal_paper
+AIRFLOW_CTX_TASK_ID=combine_articles_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-13T10:46:02.615461+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-13T10:46:02.615461+00:00
+[2022-12-13 10:46:07,279] {logging_mixin.py:115} INFO - {'joke': 'How do you make holy water? You boil the hell out of it.', 'quote': 'Curiosity is the most powerful thing you own. Imagination is a force that can actually manifest a reality.', 'news': [{'title': "Tanzania to Host the AGRF, Africa's Food System Forum 2023", 'published_date': '2022-12-13 10:28:45', 'summary': "[AGRA] Tanzania will host the AGRF 2023 Summit, the announcement was made by Her Excellency Samia Suluhu Hassan, the president of the United Republic of Tanzania and H.E Hailemariam Dessalegn, the Chair of the AGRF Partners Group on the sidelines of the U.S. Africa Leaders' Summit currently taking place in Washington, DC."}, {'title': "Qatar's QIA leads $196.5mln funding round of cybersecurity start-up Snyk", 'published_date': '2022-12-13 10:28:41', 'summary': 'The investment is expected to drive innovation and expansion'}, {'title': 'New strategy and brand identity set to revitalize Riyadat Mall', 'published_date': '2022-12-13 10:28:15', 'summary': 'The announcement comes as part of the National Day celebrations scheduled to take place from 15th to 18th December at the mall, located in A’ali'}], 'meme': 'https://redd.it/zk4yi7', 'songs': [['Never Say Never', 'The Fray', 'The Fray'], ['Victoria - EP Version', 'Inside Wants Out', 'John Mayer']]}
+[2022-12-13 10:46:07,279] {python.py:173} INFO - Done. Returned value was: {'joke': 'How do you make holy water? You boil the hell out of it.', 'quote': 'Curiosity is the most powerful thing you own. Imagination is a force that can actually manifest a reality.', 'news': [{'title': "Tanzania to Host the AGRF, Africa's Food System Forum 2023", 'published_date': '2022-12-13 10:28:45', 'summary': "[AGRA] Tanzania will host the AGRF 2023 Summit, the announcement was made by Her Excellency Samia Suluhu Hassan, the president of the United Republic of Tanzania and H.E Hailemariam Dessalegn, the Chair of the AGRF Partners Group on the sidelines of the U.S. Africa Leaders' Summit currently taking place in Washington, DC."}, {'title': "Qatar's QIA leads $196.5mln funding round of cybersecurity start-up Snyk", 'published_date': '2022-12-13 10:28:41', 'summary': 'The investment is expected to drive innovation and expansion'}, {'title': 'New strategy and brand identity set to revitalize Riyadat Mall', 'published_date': '2022-12-13 10:28:15', 'summary': 'The announcement comes as part of the National Day celebrations scheduled to take place from 15th to 18th December at the mall, located in A’ali'}], 'meme': 'https://redd.it/zk4yi7', 'songs': [['Never Say Never', 'The Fray', 'The Fray'], ['Victoria - EP Version', 'Inside Wants Out', 'John Mayer']]}
+[2022-12-13 10:46:07,317] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=cereal_paper, task_id=combine_articles_task, execution_date=20221213T104602, start_date=20221213T104607, end_date=20221213T104607
+[2022-12-13 10:46:07,417] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-13 10:46:07,465] {local_task_job.py:273} INFO - 2 downstream tasks scheduled from follow-on schedule check

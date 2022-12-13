@@ -1,0 +1,27 @@
+[2022-12-13 11:44:40,894] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.get_joke_task manual__2022-12-13T11:44:39.899976+00:00 [queued]>
+[2022-12-13 11:44:40,906] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.get_joke_task manual__2022-12-13T11:44:39.899976+00:00 [queued]>
+[2022-12-13 11:44:40,906] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 11:44:40,907] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-13 11:44:40,907] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 11:44:40,929] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_joke_task> on 2022-12-13 11:44:39.899976+00:00
+[2022-12-13 11:44:40,937] {standard_task_runner.py:52} INFO - Started process 676 to run task
+[2022-12-13 11:44:40,942] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'cereal_paper', 'get_joke_task', 'manual__2022-12-13T11:44:39.899976+00:00', '--job-id', '201', '--raw', '--subdir', 'DAGS_FOLDER/cereal-paper.py', '--cfg-path', '/tmp/tmp8l1g46es', '--error-file', '/tmp/tmpf286gzi8']
+[2022-12-13 11:44:40,944] {standard_task_runner.py:80} INFO - Job 201: Subtask get_joke_task
+[2022-12-13 11:44:41,117] {task_command.py:369} INFO - Running <TaskInstance: cereal_paper.get_joke_task manual__2022-12-13T11:44:39.899976+00:00 [running]> on host 44822d5113ae
+[2022-12-13 11:44:41,256] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=cerealman@akashkhamkar.in
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=cereal_paper
+AIRFLOW_CTX_TASK_ID=get_joke_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-13T11:44:39.899976+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-13T11:44:39.899976+00:00
+[2022-12-13 11:44:41,763] {logging_mixin.py:115} INFO - {'error': False, 'category': 'Dark', 'type': 'single', 'joke': 'My little daughter came to me all excited, saying "Daddy! Daddy! Guess how old I\'ll be in June!"\n"Oh I don\'t know princess, why don\'t you tell me?" I said. She gave me a huge smile and held up four fingers.\nIt\'s now three hours later, police have joined in and she still won\'t say where she got them.', 'flags': {'nsfw': False, 'religious': False, 'political': False, 'racist': False, 'sexist': False, 'explicit': False}, 'id': 165, 'safe': False, 'lang': 'en'}
+[2022-12-13 11:44:41,764] {python.py:173} INFO - Done. Returned value was: My little daughter came to me all excited, saying "Daddy! Daddy! Guess how old I'll be in June!"
+"Oh I don't know princess, why don't you tell me?" I said. She gave me a huge smile and held up four fingers.
+It's now three hours later, police have joined in and she still won't say where she got them.
+[2022-12-13 11:44:41,828] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=cereal_paper, task_id=get_joke_task, execution_date=20221213T114439, start_date=20221213T114440, end_date=20221213T114441
+[2022-12-13 11:44:41,884] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-13 11:44:41,944] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

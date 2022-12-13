@@ -1,0 +1,24 @@
+[2022-12-13 11:33:08,918] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.get_meme_task manual__2022-12-13T11:33:08.108064+00:00 [queued]>
+[2022-12-13 11:33:08,928] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: cereal_paper.get_meme_task manual__2022-12-13T11:33:08.108064+00:00 [queued]>
+[2022-12-13 11:33:08,929] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 11:33:08,929] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-12-13 11:33:08,930] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-13 11:33:08,941] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_meme_task> on 2022-12-13 11:33:08.108064+00:00
+[2022-12-13 11:33:08,945] {standard_task_runner.py:52} INFO - Started process 462 to run task
+[2022-12-13 11:33:08,956] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'cereal_paper', 'get_meme_task', 'manual__2022-12-13T11:33:08.108064+00:00', '--job-id', '165', '--raw', '--subdir', 'DAGS_FOLDER/cereal-paper.py', '--cfg-path', '/tmp/tmpruqx5ij9', '--error-file', '/tmp/tmpza42jz7b']
+[2022-12-13 11:33:08,958] {standard_task_runner.py:80} INFO - Job 165: Subtask get_meme_task
+[2022-12-13 11:33:09,119] {task_command.py:369} INFO - Running <TaskInstance: cereal_paper.get_meme_task manual__2022-12-13T11:33:08.108064+00:00 [running]> on host 44822d5113ae
+[2022-12-13 11:33:09,334] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=cerealman@akashkhamkar.in
+AIRFLOW_CTX_DAG_OWNER=akashk
+AIRFLOW_CTX_DAG_ID=cereal_paper
+AIRFLOW_CTX_TASK_ID=get_meme_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-13T11:33:08.108064+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-13T11:33:08.108064+00:00
+[2022-12-13 11:33:10,201] {python.py:173} INFO - Done. Returned value was: https://redd.it/zkkc3t
+[2022-12-13 11:33:10,289] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=cereal_paper, task_id=get_meme_task, execution_date=20221213T113308, start_date=20221213T113308, end_date=20221213T113310
+[2022-12-13 11:33:10,330] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-13 11:33:10,418] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
