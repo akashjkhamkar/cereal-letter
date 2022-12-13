@@ -5,6 +5,7 @@ def combine_articles(**context):
     article['quote'] = context['ti'].xcom_pull(task_ids='get_quote_task')
     article['news'] = context['ti'].xcom_pull(task_ids='get_news_task')
     article['meme'] = context['ti'].xcom_pull(task_ids='get_meme_task')
+    article['songs'] = context['ti'].xcom_pull(task_ids='get_songs_from_db_task')
 
     print(article)
     return article

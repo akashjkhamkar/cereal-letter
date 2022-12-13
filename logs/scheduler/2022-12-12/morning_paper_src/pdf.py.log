@@ -1478,3 +1478,8 @@
 [2022-12-12 19:39:05,023] {logging_mixin.py:115} INFO - [2022-12-12 19:39:05,022] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/morning_paper_src/pdf.py
 [2022-12-12 19:39:05,037] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/morning_paper_src/pdf.py
 [2022-12-12 19:39:05,059] {processor.py:161} INFO - Processing /opt/airflow/dags/morning_paper_src/pdf.py took 0.043 seconds
+[2022-12-12 19:39:35,274] {processor.py:153} INFO - Started process (PID=4088) to work on /opt/airflow/dags/morning_paper_src/pdf.py
+[2022-12-12 19:39:35,276] {processor.py:641} INFO - Processing file /opt/airflow/dags/morning_paper_src/pdf.py for tasks to queue
+[2022-12-12 19:39:35,277] {logging_mixin.py:115} INFO - [2022-12-12 19:39:35,277] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/morning_paper_src/pdf.py
+[2022-12-12 19:39:35,291] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/morning_paper_src/pdf.py
+[2022-12-12 19:39:35,308] {processor.py:161} INFO - Processing /opt/airflow/dags/morning_paper_src/pdf.py took 0.040 seconds

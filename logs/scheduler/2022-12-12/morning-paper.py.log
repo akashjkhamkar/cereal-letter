@@ -6690,3 +6690,10 @@ ModuleNotFoundError: No module named 'unicode'
 [2022-12-12 19:39:00,050] {logging_mixin.py:115} INFO - [2022-12-12 19:39:00,050] {dag.py:2371} INFO - Sync 1 DAGs
 [2022-12-12 19:39:00,069] {logging_mixin.py:115} INFO - [2022-12-12 19:39:00,069] {dag.py:2919} INFO - Setting next_dagrun for daily_paper to 2022-12-12T00:00:00+00:00, run_after=2022-12-13T00:00:00+00:00
 [2022-12-12 19:39:00,078] {processor.py:161} INFO - Processing /opt/airflow/dags/morning-paper.py took 0.116 seconds
+[2022-12-12 19:39:30,284] {processor.py:153} INFO - Started process (PID=4083) to work on /opt/airflow/dags/morning-paper.py
+[2022-12-12 19:39:30,286] {processor.py:641} INFO - Processing file /opt/airflow/dags/morning-paper.py for tasks to queue
+[2022-12-12 19:39:30,287] {logging_mixin.py:115} INFO - [2022-12-12 19:39:30,287] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/morning-paper.py
+[2022-12-12 19:39:30,338] {processor.py:651} INFO - DAG(s) dict_keys(['daily_paper']) retrieved from /opt/airflow/dags/morning-paper.py
+[2022-12-12 19:39:30,379] {logging_mixin.py:115} INFO - [2022-12-12 19:39:30,379] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 19:39:30,404] {logging_mixin.py:115} INFO - [2022-12-12 19:39:30,404] {dag.py:2919} INFO - Setting next_dagrun for daily_paper to 2022-12-12T00:00:00+00:00, run_after=2022-12-13T00:00:00+00:00
+[2022-12-12 19:39:30,415] {processor.py:161} INFO - Processing /opt/airflow/dags/morning-paper.py took 0.146 seconds

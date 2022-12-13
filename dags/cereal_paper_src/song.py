@@ -1,6 +1,7 @@
 import requests
 import json
 import random
+from airflow.hooks.postgres_hook import PostgresHook
 
 def get_song():
     song_id = random.randrange(2000000)
@@ -18,3 +19,17 @@ def get_song():
 
     print(song_dict)
     return song_dict
+
+def get_songs_from_db():
+    ids = [random.randrange(100) for i in range(3)]
+    query = 'SELECT "Track Name", "Album Name", "Artist Names" FROM songs WHERE id IN ({}, {}, {})'.format(ids[0], ids[1], ids[2])
+
+    pg_hook = PostgresHook(
+        postgres_conn_id='postgres_default',
+        schema='airflow'
+    )
+    
+    pg_conn = pg_hook.get_conn()
+    cursor = pg_conn.cursor()
+    cursor.execute(query)
+    return cursor.fetchall()
