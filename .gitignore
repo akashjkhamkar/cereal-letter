@@ -1,4 +1,4 @@
-logs/*
+logs
 mongo_db_data
 postgres_db_data
 dags/__pycache__/

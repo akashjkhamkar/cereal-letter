@@ -8979,3 +8979,58 @@ File Path                                  PID    Runtime      # DAGs    # Error
 ================================================================================
 [2022-12-13 05:12:38,406] {manager.py:919} ERROR - Processor for /opt/airflow/dags/cereal-paper.py exited with return code 1.
 [2022-12-13 05:12:38,408] {manager.py:919} ERROR - Processor for /opt/airflow/dags/cereal_paper_src/pdf.py exited with return code 1.
+[2022-12-13 05:12:44,417] {manager.py:803} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/cereal-paper.py                                   0          -1  0.06s           2022-12-13T05:12:38
+/opt/airflow/dags/cereal_paper_src/pdf.py                           0          -1  0.04s           2022-12-13T05:12:38
+================================================================================
+[2022-12-13 05:13:08,580] {manager.py:919} ERROR - Processor for /opt/airflow/dags/cereal-paper.py exited with return code 1.
+[2022-12-13 05:13:08,582] {manager.py:919} ERROR - Processor for /opt/airflow/dags/cereal_paper_src/pdf.py exited with return code 1.
+[2022-12-13 05:13:14,613] {manager.py:803} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/cereal-paper.py                                   0          -1  0.03s           2022-12-13T05:13:08
+/opt/airflow/dags/cereal_paper_src/pdf.py                           0          -1  0.02s           2022-12-13T05:13:08
+================================================================================
+[2022-12-13 05:13:38,787] {manager.py:919} ERROR - Processor for /opt/airflow/dags/cereal-paper.py exited with return code 1.
+[2022-12-13 05:13:38,793] {manager.py:919} ERROR - Processor for /opt/airflow/dags/cereal_paper_src/pdf.py exited with return code 1.
+[2022-12-13 05:13:44,843] {manager.py:803} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/cereal-paper.py                                   0          -1  0.04s           2022-12-13T05:13:38
+/opt/airflow/dags/cereal_paper_src/pdf.py                           0          -1  0.03s           2022-12-13T05:13:38
+================================================================================
+[2022-12-13 05:14:09,070] {manager.py:919} ERROR - Processor for /opt/airflow/dags/cereal-paper.py exited with return code 1.
+[2022-12-13 05:14:09,072] {manager.py:919} ERROR - Processor for /opt/airflow/dags/cereal_paper_src/pdf.py exited with return code 1.
+[2022-12-13 05:14:15,078] {manager.py:803} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/cereal-paper.py                                   0          -1  0.06s           2022-12-13T05:14:09
+/opt/airflow/dags/cereal_paper_src/pdf.py                           0          -1  0.04s           2022-12-13T05:14:09
+================================================================================
+[2022-12-13 05:14:39,300] {manager.py:919} ERROR - Processor for /opt/airflow/dags/cereal_paper_src/pdf.py exited with return code 1.
+[2022-12-13 05:14:39,304] {manager.py:919} ERROR - Processor for /opt/airflow/dags/cereal-paper.py exited with return code 1.
+[2022-12-13 05:14:45,331] {manager.py:803} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/cereal-paper.py                                   0          -1  0.07s           2022-12-13T05:14:39
+/opt/airflow/dags/cereal_paper_src/pdf.py                           0          -1  0.03s           2022-12-13T05:14:39
+================================================================================
+[2022-12-13 05:15:03,448] {manager.py:684} INFO - Searching for files in /opt/airflow/dags
+[2022-12-13 05:15:03,505] {manager.py:687} INFO - There are 0 files in /opt/airflow/dags
