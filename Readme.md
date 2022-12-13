@@ -1,6 +1,6 @@
 # Cereal Letter
 
-![logo.png](/readme_images/logo.png)
+![logo.jpg](/readme_images/logo.jpg)
 
 A daily letter composed of jokes, news, a deep quote and some good song suggestions by the @akashjkhamkar himself
 
@@ -8,7 +8,7 @@ A daily letter composed of jokes, news, a deep quote and some good song suggesti
 
 Motivation behind this project was to understand how the ETL pipelines work and learn how frameworks such airflow and argo are used
 
-![Screenshot 2022-12-13 at 7.20.30 PM.png](/readme_images/Screenshot_2022-12-13_at_7.20.30_PM.png)
+![Screenshot 2022-12-13 at 7.20.30 PM.jpg](/readme_images/Screenshot_2022-12-13_at_7.20.30_PM.jpg)
 
 ### Stack
 
@@ -24,7 +24,7 @@ we later combine this info together, and save the json data inside mongodb for s
 
 and we generate the pdf using the data, and send it to the user
 
-![Screenshot 2022-12-13 at 7.17.21 PM.png](Cereal%20Letter%202bb8dbb74f02423ea0830484aaf03c70/Screenshot_2022-12-13_at_7.17.21_PM.png)
+![Screenshot 2022-12-13 at 7.17.21 PM.jpg](./readme_images/Screenshot_2022-12-13_at_7.17.21_PM.jpg)
 
 ### How to launch ?
 
