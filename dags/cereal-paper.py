@@ -4,7 +4,7 @@ from datetime import timedelta
 
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator, PythonVirtualenvOperator
-from airflow.operators.postgres_operator import PostgresOperator
+from airflow.operators.email_operator import EmailOperator
 from airflow.utils.dates import days_ago
 
 from cereal_paper_src.news import get_news
@@ -19,8 +19,8 @@ from cereal_paper_src.mongo_utils import save_to_db
 default_args = {
     'owner': 'akashk',
     'depends_on_past': False,
-    'email': ['akash.khamkar40@gmail.com'],
-    'email_on_failure': False,
+    'email': 'cerealman@akashkhamkar.in',
+    'email_on_failure': True,
     'email_on_retry': False,
     'retries': 1,
     'retry_delay': timedelta(minutes=1),
@@ -96,4 +96,13 @@ create_the_letter_pdf = PythonOperator(
     dag=dag
 )
 
+send_email = EmailOperator( 
+    task_id='send_email', 
+    to='akash.khamkar40@gmail.com', 
+    subject='cereal bro here', 
+    html_content="Hello world, its cereal man", 
+    dag=dag
+)
+
 extraction_tasks >> combine_all_articles >> [create_the_letter_pdf, save_letter_to_db]
+create_the_letter_pdf >> send_email
