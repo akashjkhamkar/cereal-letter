@@ -1,9 +1,13 @@
+import uuid
+
 from fpdf import FPDF
 from datetime import date
 
 title = 'Cereal Paper'
 todays_date = str(date.today())
 logo = './dags/cereal_paper_src/logo.png'
+output_dir = './temp/'
+filename = 'cereal_letter'
 
 def convert_date(date_string):
     return date_string[2:]
@@ -82,4 +86,8 @@ def create_pdf(**context):
         pdf.ln(2)
 
     footer(pdf, "*    *    *")
-    pdf.output('./temp/cereal_paper.pdf', 'F')
+    
+    output_file = output_dir + filename + str(uuid.uuid4()) + '.pdf'
+    pdf.output(output_file, 'F')
+
+    return output_file

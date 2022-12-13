@@ -3,3 +3,4 @@ mongo_db_data
 postgres_db_data
 dags/__pycache__/
 dags/cereal_paper_src/__pycache__
+temp/

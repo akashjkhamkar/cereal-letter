@@ -1,5 +1,4 @@
-import json
-import requests
+from datetime import date
 from datetime import timedelta
 
 from airflow import DAG
@@ -99,8 +98,9 @@ create_the_letter_pdf = PythonOperator(
 send_email = EmailOperator( 
     task_id='send_email', 
     to='akash.khamkar40@gmail.com', 
-    subject='cereal bro here', 
-    html_content="Hello world, its cereal man", 
+    subject='Cereal letter | ' + str(date.today()),
+    html_content="Top of the morning, your todays cereal letter is here. ",
+    files=["{{ task_instance.xcom_pull(task_ids='create_pdf_task') }}"],
     dag=dag
 )
 
