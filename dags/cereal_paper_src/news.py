@@ -1,7 +1,7 @@
 import requests
 import json
 
-max_number_of_news = 2
+max_number_of_news = 3
 
 def get_news():
     res = requests.get('https://newsdata.io/api/1/news?apikey=pub_14522263f5b506fbc598ba7459459c982de1f&language=en&category=top,technology,science&page=1')

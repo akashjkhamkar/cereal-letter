@@ -3,7 +3,7 @@ version: '3.4'
 
 x-common:
   &common
-  image: apache/airflow:2.3.0
+  build: './airflow-docker'
   user: "${AIRFLOW_UID}:0"
   env_file: 
     - .env
@@ -13,6 +13,7 @@ x-common:
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - /var/run/docker.sock:/var/run/docker.sock
+    # - ./pip:/usr/local/lib/python3.7/site-packages
 
 x-depends-on:
   &depends-on
@@ -24,7 +25,7 @@ x-depends-on:
 
 services:
   postgres:
-    image: postgres:13
+    build: './postgres-server'
     container_name: postgres
     volumes:
       - ./postgres_db_data:/var/lib/postgresql/data
@@ -40,14 +41,14 @@ services:
   mongodb:
     image : mongo
     container_name: mongodb
-      environment:
-        - PUID=1000
-        - PGID=1000
-      volumes:
-        - ./mongo_db_data:/data/db
-      ports:
-        - 27017:27017
-      restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - ./mongo_db_data:/data/db
+    ports:
+      - 27017:27017
+    restart: unless-stopped
 
   scheduler:
     <<: *common

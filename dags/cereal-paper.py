@@ -3,7 +3,7 @@ import requests
 from datetime import timedelta
 
 from airflow import DAG
-from airflow.operators.python_operator import PythonOperator
+from airflow.operators.python_operator import PythonOperator, PythonVirtualenvOperator
 from airflow.operators.postgres_operator import PostgresOperator
 from airflow.utils.dates import days_ago
 
@@ -32,6 +32,7 @@ dag = DAG(
     description='A DAG to fetch interesting stuff from a collection of open apis and send user a paper made out of it.',
     start_date=days_ago(1),
     tags=['automationwithairflow'],
+    render_template_as_native_obj=True,
 )
 
 extraction_tasks = []
@@ -86,6 +87,5 @@ create_pdf = PythonOperator(
     provide_context=True,
     dag=dag
 )
-
 
 extraction_tasks >> combine_articles >> create_pdf

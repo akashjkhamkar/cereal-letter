@@ -22,10 +22,10 @@ def get_song():
 
 def get_songs_from_db():
     ids = [random.randrange(100) for i in range(3)]
-    query = 'SELECT "Track Name", "Album Name", "Artist Names" FROM songs WHERE id IN ({}, {}, {})'.format(ids[0], ids[1], ids[2])
+    query = 'SELECT "track", "album", "artists" FROM songs WHERE id IN ({}, {}, {})'.format(ids[0], ids[1], ids[2])
 
     pg_hook = PostgresHook(
-        postgres_conn_id='postgres_default',
+        postgres_conn_id='my_postgres_default',
         schema='airflow'
     )
     

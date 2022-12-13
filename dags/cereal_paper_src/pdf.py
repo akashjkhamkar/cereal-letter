@@ -3,7 +3,7 @@ from datetime import date
 
 title = 'Cereal Paper'
 todays_date = str(date.today())
-logo = './dags/morning_paper_src/logo.png'
+logo = './dags/cereal_paper_src/logo.png'
 
 def convert_date(date_string):
     return date_string[2:]
@@ -30,14 +30,15 @@ def footer(pdf, text):
     pdf.cell(200, 10, txt = text, ln = 1, align = 'C')
 
 def create_pdf(**context):
-    pdf = FPDF()
-    
-    pdf.add_font('SpecialElite', '', '/opt/airflow/dags/morning_paper_src/SpecialElite.ttf', uni=True)
-    pdf.set_font('SpecialElite', '', 12)
+    article = context['ti'].xcom_pull(task_ids='combine_articles_task')
+
+    pdf = FPDF(format="letter")
     pdf.add_page()
     pdf.set_title(title)
+    
+    pdf.add_font('SpecialElite', '', './dags/cereal_paper_src/cereal.ttf', uni=True)
+    pdf.set_font('SpecialElite', '', 12)
 
-    article = context['ti'].xcom_pull(task_ids='combine_articles_task')
 
     # Adding title
     h1(pdf, title)
