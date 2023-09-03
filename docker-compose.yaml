@@ -1,27 +1,4 @@
----
 version: '3.4'
-
-x-common:
-  &common
-  build: './airflow-docker'
-  user: "${AIRFLOW_UID}:0"
-  env_file: 
-    - .env
-  volumes:
-    - ./dags:/opt/airflow/dags
-    - ./temp:/opt/airflow/temp
-    - ./logs:/opt/airflow/logs
-    - ./plugins:/opt/airflow/plugins
-    - /var/run/docker.sock:/var/run/docker.sock
-    # - ./pip:/usr/local/lib/python3.7/site-packages
-
-x-depends-on:
-  &depends-on
-  depends_on:
-    postgres:
-      condition: service_healthy
-    airflow-init:
-      condition: service_completed_successfully
 
 services:
   postgres:
@@ -39,7 +16,7 @@ services:
       - .env
 
   mongodb:
-    image : mongo
+    image: mongo
     container_name: mongodb
     environment:
       - PUID=1000
@@ -51,8 +28,21 @@ services:
     restart: unless-stopped
 
   scheduler:
-    <<: *common
-    <<: *depends-on
+    build: './airflow-docker'
+    user: "${AIRFLOW_UID}:0"
+    env_file: 
+      - .env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./temp:/opt/airflow/temp
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
     container_name: airflow-scheduler
     command: scheduler
     restart: on-failure
@@ -60,8 +50,21 @@ services:
       - "8793:8793"
 
   webserver:
-    <<: *common
-    <<: *depends-on
+    build: './airflow-docker'
+    user: "${AIRFLOW_UID}:0"
+    env_file: 
+      - .env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./temp:/opt/airflow/temp
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
     container_name: airflow-webserver
     restart: always
     command: webserver
@@ -74,7 +77,7 @@ services:
       retries: 5
   
   airflow-init:
-    <<: *common
+    build: './airflow-docker'
     container_name: airflow-init
     entrypoint: /bin/bash
     command:
